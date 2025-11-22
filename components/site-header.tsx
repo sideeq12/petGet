@@ -51,28 +51,28 @@ export function SiteHeader() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[hsl(222,47%,11%)] border-white/10 text-white w-full sm:max-w-full">
-              <SheetHeader>
-                <SheetTitle className="text-white flex items-center gap-2">
-                  <div className="bg-white rounded-full p-1.5 text-[hsl(222,47%,11%)]">
-                    <PawPrint className="h-4 w-4" />
+            <SheetContent side="right" className="bg-[hsl(222,47%,11%)] border-white/10 text-white w-full sm:max-w-full flex flex-col items-center justify-center">
+              <SheetHeader className="items-center">
+                <SheetTitle className="text-white flex items-center gap-2 text-2xl">
+                  <div className="bg-white rounded-full p-2 text-[hsl(222,47%,11%)]">
+                    <PawPrint className="h-6 w-6" />
                   </div>
                   Sunshine Vet
                 </SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-4 mt-8">
-                <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Services</Link>
-                <Link href="/locations" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Locations</Link>
-                <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">About Us</Link>
-                <Link href="/blog" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Pet Health Blog</Link>
-                <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Contact</Link>
-                <div className="pt-4 mt-4 border-t border-white/10">
-                  <a href="tel:5551234567" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-lg font-medium hover:text-[hsl(199,89%,48%)] transition-colors">
+              <nav className="flex flex-col gap-6 mt-8 items-center w-full max-w-sm text-center">
+                <Link href="/services" onClick={() => setIsOpen(false)} className="text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Services</Link>
+                <Link href="/locations" onClick={() => setIsOpen(false)} className="text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Locations</Link>
+                <Link href="/about" onClick={() => setIsOpen(false)} className="text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">About Us</Link>
+                <Link href="/blog" onClick={() => setIsOpen(false)} className="text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Pet Health Blog</Link>
+                <Link href="/contact" onClick={() => setIsOpen(false)} className="text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">Contact</Link>
+                <div className="pt-6 mt-2 border-t border-white/10 w-full flex justify-center">
+                  <a href="tel:5551234567" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-xl font-medium hover:text-[hsl(199,89%,48%)] transition-colors">
                     <Phone className="h-5 w-5" />
                     (555) 123-4567
                   </a>
                 </div>
-                <Button asChild className="mt-4 bg-[hsl(199,89%,48%)] hover:bg-[hsl(199,89%,48%)]/90 text-white rounded-full w-full font-semibold">
+                <Button asChild className="mt-2 bg-[hsl(199,89%,48%)] hover:bg-[hsl(199,89%,48%)]/90 text-white rounded-full w-full font-semibold text-lg h-12">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>Book Appointment</Link>
                 </Button>
               </nav>
