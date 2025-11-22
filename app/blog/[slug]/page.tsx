@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/hero-section";
+import { BLOG_CONTENT } from "@/lib/blog-content";
 import { BLOG_POSTS } from "@/lib/data";
 import { constructMetadata } from "@/lib/seo";
 import { notFound } from 'next/navigation';
@@ -83,41 +84,14 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary">
-            <p className="lead text-xl text-foreground/80 font-medium mb-8">
-              {post.excerpt}
-            </p>
-
-            {/* Placeholder content for the blog post */}
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            <h2>Understanding the Basics</h2>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-            <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 my-8">
-              <h3 className="text-primary mt-0">Pro Tip</h3>
-              <p className="mb-0">
-                Always consult with your veterinarian before making significant changes to your pet's diet or exercise routine.
-              </p>
-            </div>
-
-            <h2>Key Takeaways</h2>
-            <ul>
-              <li>Regular check-ups are essential for prevention</li>
-              <li>Keep vaccinations up to date</li>
-              <li>Monitor your pet's behavior for any changes</li>
-              <li>Maintain a healthy diet and exercise routine</li>
-            </ul>
-
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+            {BLOG_CONTENT[slug] || (
+              <>
+                <p className="lead text-xl text-foreground/80 font-medium mb-8">
+                  {post.excerpt}
+                </p>
+                <p>Content coming soon...</p>
+              </>
+            )}
           </div>
 
           <div className="mt-12 pt-8 border-t flex justify-between items-center">
